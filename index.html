@@ -1,15 +1,102 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
+<title>Registro</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<style>
+  .loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  </style>
+
+
 </head>
 <body>
 
-    <form method="post" action="/">
-        <input type="text" name="fname">
-        <input type="text" name="lname">
-        <button type="submit">Send to backend</button>
-    </form>
+
+  
+
+
+
+    <div class="container">
+<div id= "procesando"> 
+  <h1>Procesando...</h1>
+  <div class="loader"></div>
+</div>
+
+
+<div id="formulario">
+        <div class="jumbotron">
+            <h1>Registro SMS-SENDER</h1>
+            <p>Es un programa de escritorio que permite enviar masivamente mensajes de texto(SMS) a todos los contactos que tengas.</p>
+          </div>
+      
+
+        <h2>Datos:</h2>
+        <form method="post" action="/" onsubmit="myFunction()">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Ingrese Nombre" name="nombre" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Apellido:</label>
+                <input type="text" class="form-control" id="apellido" placeholder="Ingrese Apellido" name="apellido" required>
+              </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Ingrese Email" name="email">
+          </div>    
+          <button type="submit" class="btn btn-default">Obtener</button>
+        </form>
+
+
+      </div>
+</div>
+
+
+
+
+
+
+<!--     <form method="post" action="/">
+        <input type="text" name="fname" required> 
+        <input type="text" name="lname" required>
+        <input type="email" name="email" required >
+        <button type="submit">Bajar Programa</button>
+    </form> -->
    
+
+    <script>
+      document.getElementById("procesando").style.display = 'none';
+      function myFunction() {
+        document.getElementById("procesando").style.display = 'inline';
+        document.getElementById("formulario").style.display = 'none';
+        //console.log("subiendo archivos");
+      }
+      </script>
+      
+
+
 </body>
 </html>

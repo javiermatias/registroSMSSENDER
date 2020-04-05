@@ -1,25 +1,30 @@
 const mysql = require('mysql');
+require('dotenv').config();
 
  // First you need to create a connection to the db
- const connection = mysql.createConnection({
-   host: 'localhost',
-   user: 'root',
-   password: '123456',   
-  database: 'gastos'
+ const connection = mysql.createPool({
+  connectionLimit : 10,
+   host: process.env.host,
+   user: process.env.user,
+   password: process.env.password,   
+  database: process.env.database
  });
  
- connection.connect((err) => {
-   if(err){
+ connection.getConnection((err) => {
+   if(err){    
      console.log('Error connecting to Db');
+	 console.log(err);
      return;
    }
    console.log('Connection established');
  });
  
-/*  connection.end((err) => {
-   // The connection is terminated gracefully
-   // Ensures all previously enqueued queries are still
-   // before sending a COM_QUIT packet to the MySQL server.
+/*  const connection = mysql.createPool({
+  connectionLimit : 10,
+   host: 'MYSQL5014.site4now.net',
+   user: 'a34972_smart',
+   password: '99.tutuca',   
+  database: 'db_a34972_smart'
  }); */
 
  module.exports = connection;
