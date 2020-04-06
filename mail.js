@@ -7,7 +7,8 @@ exports.sendEmail = function(req){
 
 
 var transporter = nodemailer.createTransport({
-  service: 'gmail',
+host: 'smtp-relay.sendinblue.com',
+port: 587,
   auth: {
     user: process.env.userMail,
     pass: process.env.passMail
