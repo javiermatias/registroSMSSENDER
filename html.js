@@ -31,6 +31,8 @@ return `<!DOCTYPE html>
 
 <p>Luego se activara el sistema, y ya lo puedes usar con normalidad. </p>
 
+<p>La licencia demo dura una semana y puedes usar todas las funcionalidades. </p>
+
 <p>La licencia por PC cuesta  $60 dolares. Es de por vida, y se paga por única vez. Se puede pagar por PayPal o giro por Western Union.</p>
 
 <p>Si tenes alguna duda, con gusto te ayudaremos tanto en instalación como en la capacitación que podríamos coordinar un día mediante Skype o Whatsapp y</p> <p>Teamviewer por asistencia remota...</p>

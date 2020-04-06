@@ -6,7 +6,13 @@ var db = require('./db');
 
 var htmlscript = require('./html');
 
-var registroController = require('./registroController');
+
+var enviarMail=require('./mail');
+
+
+
+
+
 
 router.get('/',function(req,res){
     res.sendFile(path.join(__dirname+'/index.html'));
@@ -34,9 +40,11 @@ router.get('/',function(req,res){
               
               res.send('hubo un error maquina');
             } else {
-                //console.log("results:", result);
-                //res.send(`Full name is:${user} ${user} ${req.body.email}. `);html
+               
+        
+                enviarMail.sendEmail(req);
                 res.send(htmlscript.devolverHTML(user));
+                console.log("se realizo correctamente el user")
             }
         
         });
