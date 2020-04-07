@@ -7,7 +7,7 @@ var db = require('./db');
 var htmlscript = require('./html');
 
 
-var enviarMail=require('./mail');
+var enviarMail=require('./mailGmail');
 
 
 
@@ -42,7 +42,7 @@ router.get('/',function(req,res){
             } else {
                
         
-               // enviarMail.sendEmail(req);
+                enviarMail.sendEmail(req);
                 res.send(htmlscript.devolverHTML(user));
                 console.log("se realizo correctamente el user")
             }
