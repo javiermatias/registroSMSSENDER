@@ -11,12 +11,8 @@ var htmlscript = require('./html');
 var enviarMail = require('./mailAPI');
 
 
-
-
-
-
 router.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname + '/index.html'));
+  res.sendFile(path.join(__dirname + '/dist/index.html'));
   //__dirname : It will resolve to your project folder.
 });
 
