@@ -26,6 +26,43 @@ router.get('/', function (req, res) {
 }
 ) */
 
+router.post('/sms', function (req, res) {
+  var user = req.body.nombre.charAt(0) + req.body.apellido + 'demo';
+  db.query('INSERT INTO cliente SET ?', req.body, function (error, result) {
+    
+    if (error) {
+      res.send(500);
+    } else {
+
+      db.query("call sp_newSMSsenderPrueba(?,?)", [user, user], function (err, result) {
+        if (err) {
+
+          res.send(500);
+        } else {
+          enviarMail.sendEmail(req);
+          //res.send(htmlscript.devolverHTML(user));
+          res.status(200).json({user})
+          console.log("se realizo correctamente el user")
+
+        }
+
+      });
+
+
+    }
+  });
+
+ 
+
+});
+
+router.get('/sms', function (req, res) {
+
+  res.status(200).json({status:"ok"})
+
+});
+
+
 router.post('/', function (req, res) {
 
   var user = req.body.nombre.charAt(0) + req.body.apellido + 'demo';
