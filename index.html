@@ -1,90 +1,19 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-<title>Registro</title>
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-<style>
-  .loader {
-    border: 16px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 16px solid #3498db;
-    width: 120px;
-    height: 120px;
-    -webkit-animation: spin 2s linear infinite; /* Safari */
-    animation: spin 2s linear infinite;
-  }
-  
-  /* Safari */
-  @-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-  </style>
-
-
-</head>
-<body>
-
-
-  
-
-
-
-    <div class="container">
-<div id= "procesando"> 
-  <h1>Procesando...</h1>
-  <div class="loader"></div>
-</div>
-
-
-<div id="formulario">
-        <div class="jumbotron">
-            <h1>Registro SMS-SENDER</h1>
-            <p>Es un programa de escritorio que permite enviar masivamente mensajes de texto(SMS) a todos los contactos que tengas.</p>
-          </div>
-      
-
-        <h2>Datos:</h2>
-        <form method="post" action="/" onsubmit="myFunction()">
-            <div class="form-group">
-                <label for="nombre">Nombre:</label>
-                <input type="text" class="form-control" id="nombre" placeholder="Ingrese Nombre" name="nombre" required>
-              </div>
-              <div class="form-group">
-                <label for="email">Apellido:</label>
-                <input type="text" class="form-control" id="apellido" placeholder="Ingrese Apellido" name="apellido" required>
-              </div>
-          <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" class="form-control" id="email" placeholder="Ingrese Email" name="email" required>
-          </div>    
-          <button type="submit" class="btn btn-default">Obtener</button>
-        </form>
-
-
-      </div>
-</div>
-
-
-    <script>
-      document.getElementById("procesando").style.display = 'none';
-      function myFunction() {
-        document.getElementById("procesando").style.display = 'inline';
-        document.getElementById("formulario").style.display = 'none';
-        //console.log("subiendo archivos");
-      }
-      </script>
-      
-
-
-</body>
+  <meta charset="utf-8">
+  <title>SmsSender</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="styles.3ff695c00d717f2d2a11.css"></head>
+<body style="height: 100%">
+  <app-root></app-root>
+<script src="runtime-es2015.c5fa8325f89fc516600b.js" type="module"></script><script src="runtime-es5.c5fa8325f89fc516600b.js" nomodule defer></script><script src="polyfills-es5.8e50a9832860f7cf804a.js" nomodule defer></script><script src="polyfills-es2015.5b10b8fd823b6392f1fd.js" type="module"></script><script src="main-es2015.271452121408cad0ce5c.js" type="module"></script><script src="main-es5.271452121408cad0ce5c.js" nomodule defer></script></body>
 </html>
+<!-- body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%} -->
