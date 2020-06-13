@@ -13,7 +13,12 @@ var enviarMail = require('./mailAPI');
 
 router.get('/', function (req, res) {
   res.sendFile(path.join(__dirname + '/dist/index.html'));
-  //__dirname : It will resolve to your project folder.
+  
+});
+
+router.get('/whatsapp-landing', function (req, res) {
+  res.sendFile(path.join(__dirname + '/dist/index.html'));
+  
 });
 
 
