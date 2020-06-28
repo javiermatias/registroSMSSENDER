@@ -9,7 +9,7 @@ exports.sendEmailSMS = function(req){
 var transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',
   port: 587,
-  secure: false,    //<<here   
+  secure: true,    //<<here   
     auth: {
     user: process.env.userMail1,
     pass: process.env.passMail1
