@@ -27,6 +27,11 @@ router.get('/whatsapp-landing', function (req, res) {
 }
 ) */
 
+router.get('/test',function(req,res){
+  enviarGmail.sendEmailSMS(req);
+  res.send(200);
+})
+
 router.post('/sms', function (req, res) {
   var user = req.body.nombre.charAt(0) + req.body.apellido + 'demo';
   db.query('INSERT INTO cliente SET ?', req.body, function (error, result) {
@@ -41,7 +46,7 @@ router.post('/sms', function (req, res) {
           res.send(500);
         } else {
           //enviarMail.sendEmail(req); //send via novanok
-          enviarGmail.sendEmailSMS(req)
+          enviarGmail.sendEmailSMS(req);
           //res.send(htmlscript.devolverHTML(user));
           res.status(200).json({user})
           console.log("se realizo correctamente el user")
