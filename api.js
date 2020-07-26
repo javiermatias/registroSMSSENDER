@@ -34,7 +34,7 @@ router.get('/test',function(req,res){
 
 router.post('/sms', function (req, res) {
   var user = req.body.nombre.charAt(0) + req.body.apellido.trim() + 'demo';
-  user=user.split(" ").join('');
+  user=user.split(" ").join('').toLowerCase();
   console.log(user);
   db.query('INSERT INTO cliente SET ?', req.body, function (error, result) {
     
@@ -70,7 +70,7 @@ router.post('/sms', function (req, res) {
 
 router.post('/whatsapp', function (req, res) {
   var user = req.body.nombre.charAt(0) + req.body.apellido.trim() + 'demo';
-  user=user.split(" ").join('');
+  user=user.split(" ").join('').toLowerCase();
   
   db.query('INSERT INTO cliente SET ?', req.body, function (error, result) {
     
@@ -125,7 +125,7 @@ router.get('/sms', function (req, res) {
 router.post('/', function (req, res) {
 
   var user = req.body.nombre.charAt(0) + req.body.apellido.trim()  + 'demo';
-  user=user.split(" ").join('');
+  user=user.split(" ").join('').toLowerCase();
   console.log(user);
   db.query('INSERT INTO cliente SET ?', req.body, function (error, result) {
     if (error) {
