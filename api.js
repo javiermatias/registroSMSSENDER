@@ -20,6 +20,15 @@ router.get('/whatsapp-landing', function (req, res) {
   res.sendFile(path.join(__dirname + '/dist/index.html'));
   
 });
+router.get('/sms-landing', function (req, res) {
+  res.sendFile(path.join(__dirname + '/dist/index.html'));
+  
+});
+
+router.get('/faqs', function (req, res) {
+  res.sendFile(path.join(__dirname + '/faqs/index.html'));
+  
+});
 
 
 /* router.post('/', function(req,res){

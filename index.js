@@ -20,8 +20,7 @@ app.use(cors());
 
 let api = require("./api")
 
-let apiRoutes = require("./api-routes")
-// Configure bodyparser to handle post requests
+
 app.use(bodyParser.urlencoded({
     extended: true
  }));
@@ -38,7 +37,7 @@ var port = process.env.PORT || 8080;
 // Launch app to listen to specified port
 // Import routes
 app.use(express.static('./dist/'));
-
+app.use(express.static('./faqs/'));
 /* app.use('*', (req, res, next) => {
      res.sendFile(path.join(__dirname, './dist/'));
  }); */
