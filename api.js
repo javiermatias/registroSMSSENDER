@@ -48,15 +48,18 @@ router.post('/sms', function (req, res) {
   db.query('INSERT INTO cliente SET ?', req.body, function (error, result) {
     
     if (error) {
+      console.log(error);
       res.send(500);
     } else {
 
       db.query("call sp_newSMSsenderPrueba(?,?)", [user, user], function (err, result) {
         if (err) {
+          console.log(err);
 
           res.send(500);
         } else {
       
+          console.log(err);
           res.status(200).json({user})
           console.log("se realizo correctamente el user")
 
@@ -67,7 +70,7 @@ router.post('/sms', function (req, res) {
 
     }
   });
-  db.end();
+ // db.end();
  
 
 });
@@ -98,7 +101,7 @@ router.post('/whatsapp', function (req, res) {
 
       });
 
-      db.end();
+      //db.end();
     }
   });
 
