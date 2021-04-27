@@ -56,7 +56,7 @@ router.post('/sms', function (req, res) {
 
           res.send(500);
         } else {
-          enviarMail.sendEmail(req); //send via novanok
+          //enviarMail.sendEmail(req); //send via novanok
           //enviarGmail.sendEmailSMS(req);
           //res.send(htmlscript.devolverHTML(user));
           res.status(200).json({user})
@@ -69,7 +69,7 @@ router.post('/sms', function (req, res) {
 
     }
   });
-
+  db.end();
  
 
 });
@@ -102,7 +102,7 @@ router.post('/whatsapp', function (req, res) {
 
       });
 
-
+      db.end();
     }
   });
 
