@@ -56,9 +56,7 @@ router.post('/sms', function (req, res) {
 
           res.send(500);
         } else {
-          //enviarMail.sendEmail(req); //send via novanok
-          //enviarGmail.sendEmailSMS(req);
-          //res.send(htmlscript.devolverHTML(user));
+      
           res.status(200).json({user})
           console.log("se realizo correctamente el user")
 
@@ -92,9 +90,7 @@ router.post('/whatsapp', function (req, res) {
 
           res.send(500);
         } else {
-          enviarMail.sendEmailWhats(req);
-          //enviarGmail.sendEmailWhats(req);
-          //res.send(htmlscript.devolverHTML(user));
+    
           res.status(200).json({user})
           console.log("se realizo correctamente el user")
 
